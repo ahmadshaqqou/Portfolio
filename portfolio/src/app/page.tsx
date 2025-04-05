@@ -7,8 +7,8 @@ export default function Home() {
         <Image
           src="/103124SHPE-0781.jpg"
           alt="My professional headshot"
-          width={800} // change to 220
-          height={200} // change to 220
+          width={800}
+          height={200} 
           className="rounded-full shadow-lg mb-4 object-cover"
           priority
         />
@@ -28,7 +28,7 @@ export default function Home() {
             About Me
           </a>
           <a
-            href="/resume.pdf"
+            href="/resume"
             target="_blank"
             rel="noopener noreferrer"
             className="px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition"
