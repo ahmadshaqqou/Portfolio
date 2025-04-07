@@ -28,7 +28,7 @@ export default function Home() {
             About Me
           </a>
           <a
-            href="/resume"
+            href="/AhmadShaqqouResume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition"
