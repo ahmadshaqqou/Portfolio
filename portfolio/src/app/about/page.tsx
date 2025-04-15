@@ -38,33 +38,39 @@ export default function AboutPage() {
           <h2 className="text-3xl font-semibold mb-6 text-center">
             Experience
           </h2>
-          <div className="space-y-6">
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-              <div className="flex justify-between items-start">
-                <div>
-                  <h3 className="text-xl font-bold">
-                    Incoming IT Software Engineering Intern
-                  </h3>
-                  <p className="text-md text-gray-800 dark:text-gray-200">
-                    General Dynamics BIW · Summer 2025
-                  </p>
-                </div>
 
+          <div className="space-y-6">
+            {/* General Dynamics Card */}
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md relative overflow-hidden">
+              {/* Logo pinned right */}
+              <div className="absolute top-0 right-0 bottom-0 p-0">
                 <Image
                   src="/GD.png"
                   alt="General Dynamics logo"
-                  width={60}
-                  height={60}
-                  className="ml-4 rounded-md"
+                  width={100}
+                  height={100}
+                  className="object-contain h-full w-full rounded-none"
                 />
               </div>
-              <p className="mt-2 text-gray-700 dark:text-gray-300">
-                - Will be working with ...
-              </p>
+
+              {/* Text content padded from logo */}
+              <div className="pr-32">
+                <h3 className="text-xl font-bold">
+                  Incoming IT Software Engineering Intern
+                </h3>
+                <p className="text-md text-gray-800 dark:text-gray-200">
+                  General Dynamics BIW · Summer 2025
+                </p>
+                <p className="mt-2 text-gray-700 dark:text-gray-300">
+                  - Will be working with ...
+                </p>
+              </div>
             </div>
+
+            {/* Tutor Card */}
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold">
-                Computer Science and Math tutor
+                Computer Science and Math Tutor
               </h3>
               <p className="text-md text-gray-800 dark:text-gray-200">
                 Coach Kelly Live · July 2023 - Current
@@ -84,6 +90,166 @@ export default function AboutPage() {
                   Provided individualized and small group tutoring, enhancing
                   comprehension and performance on class assignments and
                   personal projects for more than 20+ students.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section className="w-full bg-gray-100 dark:bg-gray-900 py-12 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-semibold mb-10 text-center">Projects</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Project 1 */}
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md flex flex-col justify-between">
+              <div>
+                <h3 className="text-xl font-bold mb-2">DevSwipe</h3>
+                <p className="text-gray-700 dark:text-gray-300 text-sm mb-4">
+                  A platform for developers to create profiles, post updates,
+                  and connect with each other.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2 py-1 text-xs rounded">
+                    Next.js
+                  </span>
+                  <span className="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300 px-2 py-1 text-xs rounded">
+                    Tailwind CSS
+                  </span>
+                  <span className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 px-2 py-1 text-xs rounded">
+                    MongoDB
+                  </span>
+                </div>
+              </div>
+              <a
+                href="https://github.com/yourusername/devconnect"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-auto inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition text-sm text-center"
+              >
+                View on GitHub
+              </a>
+            </div>
+
+            {/* Project 2 */}
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md flex flex-col justify-between">
+              <div>
+                <h3 className="text-xl font-bold mb-2">AudioSync</h3>
+                <p className="text-gray-700 dark:text-gray-300 text-sm mb-4">
+                  An app for creating study rooms, sharing notes, and
+                  collaborating in real-time.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-2 py-1 text-xs rounded">
+                    React
+                  </span>
+                  <span className="bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 px-2 py-1 text-xs rounded">
+                    Firebase
+                  </span>
+                  <span className="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300 px-2 py-1 text-xs rounded">
+                    CSS
+                  </span>
+                </div>
+              </div>
+              <a
+                href="https://github.com/yourusername/studysync"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-auto inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition text-sm text-center"
+              >
+                View on GitHub
+              </a>
+            </div>
+
+            {/* Add more projects here */}
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md flex flex-col justify-between">
+              <div>
+                <h3 className="text-xl font-bold mb-2">StudySync</h3>
+                <p className="text-gray-700 dark:text-gray-300 text-sm mb-4">
+                  An app for creating study rooms, sharing notes, and
+                  collaborating in real-time.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-2 py-1 text-xs rounded">
+                    React
+                  </span>
+                  <span className="bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 px-2 py-1 text-xs rounded">
+                    Firebase
+                  </span>
+                  <span className="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300 px-2 py-1 text-xs rounded">
+                    CSS
+                  </span>
+                </div>
+              </div>
+              <a
+                href="https://github.com/yourusername/studysync"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-auto inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition text-sm text-center"
+              >
+                View on GitHub
+              </a>
+            </div>
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md flex flex-col justify-between">
+              <div>
+                <h3 className="text-xl font-bold mb-2">StudySync</h3>
+                <p className="text-gray-700 dark:text-gray-300 text-sm mb-4">
+                  An app for creating study rooms, sharing notes, and
+                  collaborating in real-time.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-2 py-1 text-xs rounded">
+                    React
+                  </span>
+                  <span className="bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 px-2 py-1 text-xs rounded">
+                    Firebase
+                  </span>
+                  <span className="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300 px-2 py-1 text-xs rounded">
+                    CSS
+                  </span>
+                </div>
+              </div>
+              <a
+                href="https://github.com/yourusername/studysync"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-auto inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition text-sm text-center"
+              >
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Education Section */}
+      <section className="w-full bg-gray-200 dark:bg-[#1e1e1e] py-12 px-6">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-semibold mb-6 text-center">Education</h2>
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md relative overflow-hidden">
+            <div className="absolute top-0 right-0 bottom-0 p-0">
+              <Image
+                src="/UCF.png"
+                alt="UCF logo"
+                width={100}
+                height={100}
+                className="object-contain h-full w-full rounded-none"
+              />
+            </div>
+            <div className="pr-32">
+              <h3 className="text-xl font-bold">
+                University of Central Florida (UCF)
+              </h3>
+              <p className="text-md text-gray-800 dark:text-gray-200">
+                B.S. in Computer Science, Expected Graduation: December 2025
+              </p>
+              <ul className="mt-4 text-gray-700 dark:text-gray-300 list-disc list-inside space-y-2">
+                <li>Dean’s List (multiple semesters)</li>
+                <li>Member of Knight Hacks, SHPE, and Hack@UCF</li>
+                <li>
+                  Relevant Courses: Data Structures & Algorithms, Software
+                  Engineering, Operating Systems, System Software
                 </li>
               </ul>
             </div>
