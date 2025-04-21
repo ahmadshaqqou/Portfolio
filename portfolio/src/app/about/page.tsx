@@ -123,7 +123,7 @@ export default function AboutPage() {
                 </div>
               </div>
               <a
-                href="https://github.com/yourusername/devconnect"
+                href="https://github.com/devswipe-dev/devswipe"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-auto inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition text-sm text-center"
@@ -153,7 +153,7 @@ export default function AboutPage() {
                 </div>
               </div>
               <a
-                href="https://github.com/yourusername/studysync"
+                href= "https://github.com/NSel1727/Audio-Sync"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-auto inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition text-sm text-center"
@@ -165,7 +165,7 @@ export default function AboutPage() {
             {/* Add more projects here */}
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md flex flex-col justify-between">
               <div>
-                <h3 className="text-xl font-bold mb-2">StudySync</h3>
+                <h3 className="text-xl font-bold mb-2">Contact Manager</h3>
                 <p className="text-gray-700 dark:text-gray-300 text-sm mb-4">
                   An app for creating study rooms, sharing notes, and
                   collaborating in real-time.
@@ -183,7 +183,7 @@ export default function AboutPage() {
                 </div>
               </div>
               <a
-                href="https://github.com/yourusername/studysync"
+                href="https://github.com/vphatfla/COP-4331-S-Project"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-auto inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition text-sm text-center"
@@ -193,7 +193,7 @@ export default function AboutPage() {
             </div>
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md flex flex-col justify-between">
               <div>
-                <h3 className="text-xl font-bold mb-2">StudySync</h3>
+                <h3 className="text-xl font-bold mb-2">insert project</h3>
                 <p className="text-gray-700 dark:text-gray-300 text-sm mb-4">
                   An app for creating study rooms, sharing notes, and
                   collaborating in real-time.
@@ -211,7 +211,7 @@ export default function AboutPage() {
                 </div>
               </div>
               <a
-                href="https://github.com/yourusername/studysync"
+                href="https://github.com/yourusername/insert project"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-auto inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition text-sm text-center"
@@ -219,6 +219,63 @@ export default function AboutPage() {
                 View on GitHub
               </a>
             </div>
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md flex flex-col justify-between">
+              <div>
+                <h3 className="text-xl font-bold mb-2">insert project</h3>
+                <p className="text-gray-700 dark:text-gray-300 text-sm mb-4">
+                  An app for creating study rooms, sharing notes, and
+                  collaborating in real-time.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-2 py-1 text-xs rounded">
+                    React
+                  </span>
+                  <span className="bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 px-2 py-1 text-xs rounded">
+                    Firebase
+                  </span>
+                  <span className="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300 px-2 py-1 text-xs rounded">
+                    CSS
+                  </span>
+                </div>
+              </div>
+              <a
+                href="https://github.com/yourusername/insert project"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-auto inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition text-sm text-center"
+              >
+                View on GitHub
+              </a>
+            </div>
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md flex flex-col justify-between">
+              <div>
+                <h3 className="text-xl font-bold mb-2">insert project</h3>
+                <p className="text-gray-700 dark:text-gray-300 text-sm mb-4">
+                  An app for creating study rooms, sharing notes, and
+                  collaborating in real-time.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-2 py-1 text-xs rounded">
+                    React
+                  </span>
+                  <span className="bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 px-2 py-1 text-xs rounded">
+                    Firebase
+                  </span>
+                  <span className="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300 px-2 py-1 text-xs rounded">
+                    CSS
+                  </span>
+                </div>
+              </div>
+              <a
+                href="https://github.com/yourusername/insert project"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-auto inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition text-sm text-center"
+              >
+                View on GitHub
+              </a>
+            </div>
+            
           </div>
         </div>
       </section>
@@ -246,7 +303,7 @@ export default function AboutPage() {
               </p>
               <ul className="mt-4 text-gray-700 dark:text-gray-300 list-disc list-inside space-y-2">
                 <li>Dean’s List (multiple semesters)</li>
-                <li>Member of Knight Hacks, SHPE, and Hack@UCF</li>
+                <li>Member of Knight Hacks, SHPE</li>
                 <li>
                   Relevant Courses: Data Structures & Algorithms, Software
                   Engineering, Operating Systems, System Software
