@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import react from "react";
 
 export default function AboutPage() {
   return (
@@ -153,7 +154,7 @@ export default function AboutPage() {
                 </div>
               </div>
               <a
-                href= "https://github.com/NSel1727/Audio-Sync"
+                href="https://github.com/NSel1727/Audio-Sync"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-auto inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition text-sm text-center"
@@ -275,7 +276,6 @@ export default function AboutPage() {
                 View on GitHub
               </a>
             </div>
-            
           </div>
         </div>
       </section>
@@ -310,6 +310,100 @@ export default function AboutPage() {
                 </li>
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+      {/* Contact Section */}
+      <section className="bg-gray-900 text-white py-16 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold mb-8 text-center">Contact Me</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Left: Contact Text & Info */}
+            <div>
+              <h3 className="text-2xl font-semibold">Let's connect.</h3>
+              <p className="mt-2 text-gray-300">
+                Fill out the form and I'll get back to you shortly.
+              </p>
+              <div className="mt-8 space-y-4">
+                <div className="text-sm text-gray-400">
+                  <a
+                    href="https://www.linkedin.com/in/ahmad-shaqqou/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition text-sm font-medium"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 448 512"
+                      fill="currentColor"
+                      className="w-5 h-5"
+                    >
+                      <path d="M100.28 448H7.4V149.8h92.88zM53.79 108.1C24.09 108.1 0 83.52 0 53.9 0 24.3 24.09 0 53.79 0s53.79 24.3 53.79 53.9c0 29.62-24.09 54.2-53.79 54.2zM447.9 448h-92.4V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.6V448h-92.6V149.8h88.9v40.7h1.3c12.4-23.5 42.6-48.3 87.8-48.3 93.8 0 111.1 61.8 111.1 142.3V448z" />
+                    </svg>
+                    LinkedIn
+                  </a>
+                </div>
+                <div className="text-sm text-gray-400">
+                  <a
+                    href="https://github.com/ahmadshaqqou"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition text-sm font-medium"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="w-5 h-5"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M12 0C5.37 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.113.793-.26.793-.577v-2.188c-3.338.727-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.085 1.84 1.236 1.84 1.236 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.76-1.605-2.665-.305-5.467-1.334-5.467-5.933 0-1.31.467-2.381 1.236-3.221-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.288-1.552 3.294-1.23 3.294-1.23.655 1.653.243 2.873.12 3.176.77.84 1.234 1.911 1.234 3.221 0 4.61-2.807 5.625-5.48 5.922.43.37.814 1.096.814 2.21v3.285c0 .32.192.694.8.576C20.565 21.796 24 17.297 24 12c0-6.627-5.373-12-12-12z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/*Contact Form */}
+            <form className="bg-white text-black rounded-lg p-6 flex flex-col">
+              <label htmlFor="name" className="text-sm font-semibold mb-1">
+                Name
+              </label>
+              <input
+                type="text"
+                name="name"
+                className="border rounded px-3 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+
+              <label htmlFor="email" className="text-sm font-semibold mb-1">
+                Email
+              </label>
+              <input
+                type="email"
+                name="email"
+                className="border rounded px-3 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+
+              <label htmlFor="message" className="text-sm font-semibold mb-1">
+                Message
+              </label>
+              <textarea
+                name="message"
+                rows={4}
+                className="border rounded px-3 py-2 mb-6 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              ></textarea>
+
+              <button
+                type="submit"
+                className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition"
+              >
+                Send Message
+              </button>
+            </form>
           </div>
         </div>
       </section>
