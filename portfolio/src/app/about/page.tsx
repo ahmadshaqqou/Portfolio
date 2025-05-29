@@ -57,7 +57,7 @@ export default function AboutPage() {
               {/* Text content padded from logo */}
               <div className="pr-32">
                 <h3 className="text-xl font-bold">
-                  Incoming IT Software Engineering Intern
+                  IT Software Engineering Intern
                 </h3>
                 <p className="text-md text-gray-800 dark:text-gray-200">
                   General Dynamics BIW · Summer 2025
@@ -107,19 +107,42 @@ export default function AboutPage() {
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md flex flex-col justify-between">
               <div>
                 <h3 className="text-xl font-bold mb-2">DevSwipe</h3>
-                <p className="text-gray-700 dark:text-gray-300 text-sm mb-4">
-                  A platform for developers to create profiles, post updates,
-                  and connect with each other.
+                <p className="text-gray-700 dark:text-gray-300 text-[15px] leading-relaxed mb-4">
+                  A full stack application that allows users to swipe left or
+                  right on project ideas. Websockets are utlized for real-time
+                  updates to project ideas, matches, and chat messages after a
+                  match.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2 py-1 text-xs rounded">
-                    Next.js
+                  <span className="bg-blue-300 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2 py-1 text-xs rounded">
+                    React
                   </span>
-                  <span className="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300 px-2 py-1 text-xs rounded">
-                    Tailwind CSS
+                  <span className="bg-pink-300 text-pink-800 dark:bg-pink-700 dark:text-pink-300 px-2 py-1 text-xs rounded">
+                    CSS
                   </span>
                   <span className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 px-2 py-1 text-xs rounded">
                     MongoDB
+                  </span>
+                  <span className="bg-yellow-300 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 px-2 py-1 text-xs rounded">
+                    Apache
+                  </span>
+                  <span className="bg-cyan-300 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-200 px-2 py-1 text-xs rounded">
+                    Node.js
+                  </span>
+                  <span className="bg-indigo-300 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 px-2 py-1 text-xs rounded">
+                    TypeScript
+                  </span>
+                  <span className="bg-orange-300 text-orange-800 dark:bg-orange-900 dark:text-orange-200 px-2 py-1 text-xs rounded">
+                    Amazon lightsail
+                  </span>
+                  <span className="bg-red-300 text-red-800 dark:bg-red-900 dark:text-red-200 px-2 py-1 text-xs rounded">
+                    Socket.io
+                  </span>
+                  <span className="bg-fuchsia-300 text-fuchsia-800 dark:bg-fuchsia-900 dark:text-fuchsia-200 px-2 py-1 text-xs rounded">
+                    Postman
+                  </span>
+                  <span className="bg-emerald-300 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200 px-2 py-1 text-xs rounded">
+                    Express
                   </span>
                 </div>
               </div>
@@ -137,19 +160,25 @@ export default function AboutPage() {
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md flex flex-col justify-between">
               <div>
                 <h3 className="text-xl font-bold mb-2">AudioSync</h3>
-                <p className="text-gray-700 dark:text-gray-300 text-sm mb-4">
-                  An app for creating study rooms, sharing notes, and
-                  collaborating in real-time.
+                <p className="text-gray-700 dark:text-gray-300 text-[15px] leading-relaxed mb-4">
+                  music recognition app that lets users identify songs through
+                  audio input using the Shazam API. Once a song is recognized,
+                  the app retrieves details like the title, artist, and album,
+                  and allows users to add it directly to their Spotify
+                  playlists.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-2 py-1 text-xs rounded">
+                  <span className="bg-purple-300 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-2 py-1 text-xs rounded">
+                    Python
+                  </span>
+                  <span className="bg-yellow-300 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 px-2 py-1 text-xs rounded">
                     React
                   </span>
-                  <span className="bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 px-2 py-1 text-xs rounded">
-                    Firebase
-                  </span>
-                  <span className="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300 px-2 py-1 text-xs rounded">
+                  <span className="bg-blue-200 text-blue-800 dark:bg-blue-700 dark:text-blue-300 px-2 py-1 text-xs rounded">
                     CSS
+                  </span>
+                  <span className="bg-orange-300 text-orange-800 dark:bg-orange-700 dark:text-orange-300 px-2 py-1 text-xs rounded">
+                    Flask
                   </span>
                 </div>
               </div>
@@ -163,23 +192,63 @@ export default function AboutPage() {
               </a>
             </div>
 
-            {/* Add more projects here */}
+            {/* Project 3*/}
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md flex flex-col justify-between">
+              <div>
+                <h3 className="text-xl font-bold mb-2">Forex Trading Bot</h3>
+                <p className="text-gray-700 dark:text-gray-300 text-[15px] leading-relaxed mb-4">
+                  A Python-based trading bot that uses market indicators to make
+                  automated buy/sell decisions in the foreign exchange market.
+                  The bot’s performance was optimized through backtesting with
+                  the Alpaca API, resulting in consistent and profitable trade
+                  outcomes.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="bg-purple-300 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-2 py-1 text-xs rounded">
+                    Python
+                  </span>
+                  <span className="bg-yellow-300 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 px-2 py-1 text-xs rounded">
+                    Jupyter Notebook
+                  </span>
+                  <span className="bg-gray-300 text-gray-800 dark:bg-gray-700 dark:text-gray-300 px-2 py-1 text-xs rounded">
+                    Alpaca API
+                  </span>
+                </div>
+              </div>
+              <a
+                href="https://github.com/yourusername/insert project"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-auto inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition text-sm text-center"
+              >
+                View on GitHub
+              </a>
+            </div>
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md flex flex-col justify-between">
               <div>
                 <h3 className="text-xl font-bold mb-2">Contact Manager</h3>
                 <p className="text-gray-700 dark:text-gray-300 text-sm mb-4">
-                  An app for creating study rooms, sharing notes, and
-                  collaborating in real-time.
+                  music recognition app that lets users identify songs through
+                  audio input using the Shazam API. Once a song is recognized,
+                  the app retrieves details like the title, artist, and album,
+                  and allows users to add it directly to their Spotify
+                  playlists.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-2 py-1 text-xs rounded">
-                    React
+                <span className="bg-fuchsia-300 text-fuchsia-800 dark:bg-fuchsia-900 dark:text-fuchsia-200 px-2 py-1 text-xs rounded">
+                    Linix
                   </span>
-                  <span className="bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 px-2 py-1 text-xs rounded">
-                    Firebase
+                  <span className="bg-red-300 text-red-800 dark:bg-red-900 dark:text-red-200 px-2 py-1 text-xs rounded">
+                    Apache
                   </span>
-                  <span className="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300 px-2 py-1 text-xs rounded">
-                    CSS
+                  <span className="bg-yellow-300 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 px-2 py-1 text-xs rounded">
+                    MySQL
+                  </span>
+                  <span className="bg-purple-300 text-purple-800 dark:bg-purple-700 dark:text-purple-300 px-2 py-1 text-xs rounded">
+                    PHP
+                  </span>
+                  <span className="bg-orange-300 text-orange-800 dark:bg-orange-700 dark:text-orange-300 px-2 py-1 text-xs rounded">
+                    Vite
                   </span>
                 </div>
               </div>
@@ -194,19 +263,19 @@ export default function AboutPage() {
             </div>
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md flex flex-col justify-between">
               <div>
-                <h3 className="text-xl font-bold mb-2">insert project</h3>
+                <h3 className="text-xl font-bold mb-2">Forex Trading Bot</h3>
                 <p className="text-gray-700 dark:text-gray-300 text-sm mb-4">
                   An app for creating study rooms, sharing notes, and
                   collaborating in real-time.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-2 py-1 text-xs rounded">
+                  <span className="bg-red-300 text-red-800 dark:bg-red-900 dark:text-red-200 px-2 py-1 text-xs rounded">
                     React
                   </span>
-                  <span className="bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 px-2 py-1 text-xs rounded">
+                  <span className="bg-yellow-300 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 px-2 py-1 text-xs rounded">
                     Firebase
                   </span>
-                  <span className="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300 px-2 py-1 text-xs rounded">
+                  <span className="bg-gray-300 text-gray-800 dark:bg-gray-700 dark:text-gray-300 px-2 py-1 text-xs rounded">
                     CSS
                   </span>
                 </div>
@@ -222,35 +291,7 @@ export default function AboutPage() {
             </div>
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md flex flex-col justify-between">
               <div>
-                <h3 className="text-xl font-bold mb-2">insert project</h3>
-                <p className="text-gray-700 dark:text-gray-300 text-sm mb-4">
-                  An app for creating study rooms, sharing notes, and
-                  collaborating in real-time.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-2 py-1 text-xs rounded">
-                    React
-                  </span>
-                  <span className="bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 px-2 py-1 text-xs rounded">
-                    Firebase
-                  </span>
-                  <span className="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300 px-2 py-1 text-xs rounded">
-                    CSS
-                  </span>
-                </div>
-              </div>
-              <a
-                href="https://github.com/yourusername/insert project"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-auto inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition text-sm text-center"
-              >
-                View on GitHub
-              </a>
-            </div>
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md flex flex-col justify-between">
-              <div>
-                <h3 className="text-xl font-bold mb-2">insert project</h3>
+                <h3 className="text-xl font-bold mb-2">Forex Trading Bot</h3>
                 <p className="text-gray-700 dark:text-gray-300 text-sm mb-4">
                   An app for creating study rooms, sharing notes, and
                   collaborating in real-time.
