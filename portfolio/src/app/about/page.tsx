@@ -60,7 +60,7 @@ export default function AboutPage() {
                   IT Software Engineering Intern
                 </h3>
                 <p className="text-md text-gray-800 dark:text-gray-200">
-                  General Dynamics BIW · Summer 2025
+                  General Dynamics - BIW · Summer 2025
                 </p>
                 <p className="mt-2 text-gray-700 dark:text-gray-300">
                   - Will be working with ...
@@ -216,7 +216,7 @@ export default function AboutPage() {
                 </div>
               </div>
               <a
-                href="https://github.com/yourusername/insert project"
+                href="https://github.com/christina8711/forex"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-auto inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition text-sm text-center"
@@ -228,11 +228,8 @@ export default function AboutPage() {
               <div>
                 <h3 className="text-xl font-bold mb-2">Contact Manager</h3>
                 <p className="text-gray-700 dark:text-gray-300 text-sm mb-4">
-                  music recognition app that lets users identify songs through
-                  audio input using the Shazam API. Once a song is recognized,
-                  the app retrieves details like the title, artist, and album,
-                  and allows users to add it directly to their Spotify
-                  playlists.
+                A full-stack CRUD application that allows users to securely log in, add, edit, delete, and search through their personal contact list.
+                Built with user authentication and a streamlined interface for managing and organizing contact information efficiently.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                 <span className="bg-fuchsia-300 text-fuchsia-800 dark:bg-fuchsia-900 dark:text-fuchsia-200 px-2 py-1 text-xs rounded">
@@ -246,6 +243,12 @@ export default function AboutPage() {
                   </span>
                   <span className="bg-purple-300 text-purple-800 dark:bg-purple-700 dark:text-purple-300 px-2 py-1 text-xs rounded">
                     PHP
+                  </span>
+                  <span className="bg-cyan-300 text-cyan-800 dark:bg-cyan-700 dark:text-cyan-300 px-2 py-1 text-xs rounded">
+                    JavaScript
+                  </span>
+                  <span className="bg-blue-300 text-blue-800 dark:bg-blue-700 dark:text-blue-300 px-2 py-1 text-xs rounded">
+                    CSS
                   </span>
                   <span className="bg-orange-300 text-orange-800 dark:bg-orange-700 dark:text-orange-300 px-2 py-1 text-xs rounded">
                     Vite
