@@ -9,19 +9,29 @@ export default function SkillsSection() {
   const skillCategories: SkillCategory[] = [
     {
       name: "Languages",
-      skills: ["JavaScript", "TypeScript", "Python", "Java", "C", "SQL", "HTML", "CSS"]
+      skills: ["JavaScript", "TypeScript", "Python", "Java", "C", "C# (.NET)", "SQL", "HTML", "CSS","PHP (Laravel)"]
     },
     {
       name: "Frameworks & Libraries",
-      skills: ["React", "Next.js", "Node.js", "Express", "Flask", "TailwindCSS"]
+      skills: ["React", "Next.js", "Node.js", "Express", "Flask", "TailwindCSS", "MongoDB", "Vite", "Socket.io"]
     },
     {
       name: "Tools & Platforms",
-      skills: ["Git", "GitHub", "VS Code", "Postman", "AWS", "MongoDB", "MySQL"]
+      skills: ["Jira", "Git", "GitHub", "VS Code", "Postman", "AWS", "MongoDB", "MySQL", "Docker", "Vercel"]
     },
     {
       name: "Concepts",
-      skills: ["RESTful APIs", "Responsive Design", "Agile/Scrum", "CI/CD", "Testing", "Data Structures & Algorithms"]
+      skills: [
+        "REST APIs",
+        "Agile/Scrum",
+        "CI/CD",
+        "Testing",
+        "Data Structures & Algorithms",
+        "Operating Systems",
+        "Microservices",
+        "Backend",
+        "iOS/Android App Development"
+      ]
     }
   ];
 
@@ -31,7 +41,7 @@ export default function SkillsSection() {
         <h2 className="text-3xl font-bold text-center mb-12 text-theme-foreground">
           Technical Skills
         </h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {skillCategories.map((category) => (
             <div 

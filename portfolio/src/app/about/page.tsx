@@ -92,10 +92,7 @@ export default function AboutPage() {
                 I'm particularly interested in full-stack development, where I can work on both the frontend and backend
                 aspects of applications.
               </p>
-              <p className="text-lg leading-relaxed text-theme-foreground">
-                When I'm not coding, you can find me exploring new technologies, contributing to open-source projects,
-                or mentoring other students in computer science concepts.
-              </p>
+              
             </div>
           </div>
         </div>
@@ -134,13 +131,10 @@ export default function AboutPage() {
                   General Dynamics - BIW · Summer 2025
                 </p>
                 <div className="mt-4">
-                  <p className="text-theme-muted mb-2">
-                    <strong>Upcoming Role:</strong>
-                  </p>
                   <ul className="list-disc list-inside space-y-2 text-theme-muted">
-                    <li>Will be working on enterprise software solutions for defense applications</li>
-                    <li>Collaborating with cross-functional teams to develop and maintain critical IT systems</li>
-                    <li>Gaining hands-on experience with industry-standard development practices and tools</li>
+                    <li>Configured and optimized 20+ Jira workflows by setting up custom transitions, conditions, and post-functions using SIL scripts, improving ticket flow across multiple teams.</li>
+                    <li>Worked as a Jira Developer and Administrator, using JQL to build smart filters and automate ticket handling, helping cut down ticket processing time by 30%</li>
+                    <li>Wrote and deployed SIL scripts to automate manual Jira tasks, cutting configuration time by 40% and making day-to-day operations more efficient for the team.</li>
                   </ul>
                 </div>
               </div>
@@ -237,7 +231,7 @@ export default function AboutPage() {
             {/* Left: Contact Text & Info */}
             <div>
               <h3 className="text-2xl font-semibold">Let's connect.</h3>
-              <p className="mt-2 text-gray-300">
+              <p className="mt-2 text-gray-3=500">
                 Fill out the form and I'll get back to you shortly.
               </p>
               <div className="mt-8 space-y-4">
@@ -245,14 +239,14 @@ export default function AboutPage() {
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                  <span className="text-gray-300">ahmad.shaqqou@example.com</span>
+                  <span className="text-gray-500">ahmad.shaqqou@example.com</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
-                  <span className="text-gray-300">Orlando, FL</span>
+                  <span className="text-gray-500">Orlando, FL</span>
                 </div>
                 <div className="flex space-x-4 mt-6">
                   <a

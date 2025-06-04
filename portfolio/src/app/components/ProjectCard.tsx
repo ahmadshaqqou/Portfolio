@@ -47,13 +47,6 @@ export default function ProjectCard({
     <div className="bg-theme-card p-6 rounded-lg shadow-md flex flex-col justify-between h-full border-theme">
       {imagePath && (
         <div className="mb-4 overflow-hidden rounded-md">
-          <Image 
-            src={imagePath} 
-            alt={`${title} project screenshot`} 
-            width={400} 
-            height={225} 
-            className="object-cover w-full h-48 transition-transform hover:scale-105"
-          />
         </div>
       )}
       

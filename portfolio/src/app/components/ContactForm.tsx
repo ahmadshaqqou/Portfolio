@@ -80,7 +80,6 @@ export default function ContactForm() {
     setIsSubmitting(true);
     
     try {
-      // In a real application, you would send this data to your backend
       // For now, we'll simulate a successful submission after a delay
       await new Promise(resolve => setTimeout(resolve, 1000));
       

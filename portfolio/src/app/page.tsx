@@ -57,13 +57,13 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {[
-              "JavaScript/TypeScript",
+              "TypeScript",
               "React",
               "Node.js",
               "Python",
               "MongoDB",
               "MySQL",
-              "Express",
+              "React Native",
               "Git",
             ].map((skill) => (
               <div 
