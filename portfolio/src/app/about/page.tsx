@@ -13,7 +13,7 @@ export default function AboutPage() {
       technologies: [
         { name: "React", color: "blue" },
         { name: "CSS", color: "pink" },
-        { name: "MongoDB", color: "green" },
+        { name: "MongoDB", color: "emerald" },
         { name: "Apache", color: "yellow" },
         { name: "Node.js", color: "cyan" },
         { name: "TypeScript", color: "indigo" },
@@ -23,7 +23,6 @@ export default function AboutPage() {
         { name: "Express", color: "emerald" }
       ],
       githubUrl: "https://github.com/devswipe-dev/devswipe",
-      imagePath: "/project-images/devswipe.png" // Add this image to your public folder
     },
     {
       title: "AudioSync",
@@ -35,7 +34,6 @@ export default function AboutPage() {
         { name: "Flask", color: "orange" }
       ],
       githubUrl: "https://github.com/NSel1727/Audio-Sync",
-      imagePath: "/project-images/audiosync.png" // Add this image to your public folder
     },
     {
       title: "Forex Trading Bot",
@@ -46,8 +44,21 @@ export default function AboutPage() {
         { name: "Alpaca API", color: "gray" }
       ],
       githubUrl: "https://github.com/christina8711/forex",
-      imagePath: "/project-images/forex.png" // Add this image to your public folder
     },
+    {
+      title: "ahmadshaqqou.dev",
+      description: " Aportfolio that showcases my projects, technical skills, and experience.",
+      technologies: [
+        { name: "Next.js", color: "fuchsia" },
+        { name: "TypeScript", color: "red" },
+        { name: "Tailwind CSS", color: "yellow" },
+        { name: "JavaScript", color: "cyan" },
+        { name: "CSS", color: "blue" },
+        { name: "Vite", color: "orange" }
+      ],
+      githubUrl: "https://github.com/ahmadshaqqou/Portfolio",// Add this image to your public folder
+    },
+
     {
       title: "Contact Manager",
       description: "A full-stack CRUD application that allows users to securely log in, add, edit, delete, and search through their personal contact list. Built with user authentication and a streamlined interface for managing and organizing contact information efficiently.",
@@ -235,19 +246,6 @@ export default function AboutPage() {
                 Fill out the form and I'll get back to you shortly.
               </p>
               <div className="mt-8 space-y-4">
-                <div className="flex items-center gap-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                  <span className="text-gray-500">ahmad.shaqqou@example.com</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                  <span className="text-gray-500">Orlando, FL</span>
-                </div>
                 <div className="flex space-x-4 mt-6">
                   <a
                     href="https://www.linkedin.com/in/ahmad-shaqqou/"

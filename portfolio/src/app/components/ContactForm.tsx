@@ -6,7 +6,8 @@ export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''
+    message: '',
+    honeypot: '' // Hidden field for spam protection
   });
   
   const [errors, setErrors] = useState({
@@ -73,6 +74,12 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
+    // Spam check - if honeypot is filled, it's probably a bot
+    if (formData.honeypot) {
+      console.log('Spam detected, ignoring submission');
+      return;
+    }
+    
     if (!validateForm()) {
       return;
     }
@@ -80,22 +87,40 @@ export default function ContactForm() {
     setIsSubmitting(true);
     
     try {
-      // For now, we'll simulate a successful submission after a delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // Reset form after successful submission
-      setFormData({
-        name: '',
-        email: '',
-        message: ''
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: 'd85a08af-4c27-4c9a-8f10-48b4420f4841', 
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          subject: `New message from ${formData.name} - Portfolio Contact`
+        })
       });
       
-      setSubmitStatus('success');
+      const data = await response.json();
       
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setSubmitStatus('idle');
-      }, 5000);
+      if (data.success) {
+        // Reset form after successful submission
+        setFormData({
+          name: '',
+          email: '',
+          message: '',
+          honeypot: ''
+        });
+        
+        setSubmitStatus('success');
+        
+        // Reset success message after 5 seconds
+        setTimeout(() => {
+          setSubmitStatus('idle');
+        }, 5000);
+      } else {
+        throw new Error('Failed to send message');
+      }
       
     } catch (error) {
       console.error('Error submitting form:', error);
@@ -177,6 +202,19 @@ export default function ContactForm() {
         {errors.message && (
           <p className="text-red-500 text-xs mt-1">{errors.message}</p>
         )}
+      </div>
+
+      {/* Hidden honeypot field for spam protection */}
+      <div style={{ display: 'none' }}>
+        <label>Don't fill this out if you're human:</label>
+        <input
+          type="text"
+          name="honeypot"
+          value={formData.honeypot}
+          onChange={handleChange}
+          tabIndex={-1}
+          autoComplete="off"
+        />
       </div>
 
       <button
