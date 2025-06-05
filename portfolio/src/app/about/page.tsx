@@ -1,56 +1,135 @@
 import Image from "next/image";
 import Link from "next/link";
-import react from "react";
+import ProjectCard from "../components/ProjectCard";
+import SkillsSection from "../components/SkillsSection";
+import ContactForm from "../components/ContactForm";
 
 export default function AboutPage() {
+  // Project data
+  const projects = [
+    {
+      title: "DevSwipe",
+      description: "A full stack application that allows users to swipe left or right on project ideas. Websockets are utilized for real-time updates to project ideas, matches, and chat messages after a match.",
+      technologies: [
+        { name: "React", color: "blue" },
+        { name: "CSS", color: "pink" },
+        { name: "MongoDB", color: "emerald" },
+        { name: "Apache", color: "yellow" },
+        { name: "Node.js", color: "cyan" },
+        { name: "TypeScript", color: "indigo" },
+        { name: "Amazon lightsail", color: "orange" },
+        { name: "Socket.io", color: "red" },
+        { name: "Postman", color: "fuchsia" },
+        { name: "Express", color: "emerald" }
+      ],
+      githubUrl: "https://github.com/devswipe-dev/devswipe",
+    },
+    {
+      title: "AudioSync",
+      description: "Music recognition app that lets users identify songs through audio input using the Shazam API. Once a song is recognized, the app retrieves details like the title, artist, and album, and allows users to add it directly to their Spotify playlists.",
+      technologies: [
+        { name: "Python", color: "purple" },
+        { name: "React", color: "yellow" },
+        { name: "CSS", color: "blue" },
+        { name: "Flask", color: "orange" }
+      ],
+      githubUrl: "https://github.com/NSel1727/Audio-Sync",
+    },
+    {
+      title: "Forex Trading Bot",
+      description: "A Python-based trading bot that uses market indicators to make automated buy/sell decisions in the foreign exchange market. The bot's performance was optimized through backtesting with the Alpaca API, resulting in consistent and profitable trade outcomes.",
+      technologies: [
+        { name: "Python", color: "purple" },
+        { name: "Jupyter Notebook", color: "yellow" },
+        { name: "Alpaca API", color: "gray" }
+      ],
+      githubUrl: "https://github.com/christina8711/forex",
+    },
+    {
+      title: "ahmadshaqqou.dev",
+      description: " Aportfolio that showcases my projects, technical skills, and experience.",
+      technologies: [
+        { name: "Next.js", color: "fuchsia" },
+        { name: "TypeScript", color: "red" },
+        { name: "Tailwind CSS", color: "yellow" },
+        { name: "JavaScript", color: "cyan" },
+        { name: "CSS", color: "blue" },
+        { name: "Vite", color: "orange" }
+      ],
+      githubUrl: "https://github.com/ahmadshaqqou/Portfolio",// Add this image to your public folder
+    },
+
+    {
+      title: "Contact Manager",
+      description: "A full-stack CRUD application that allows users to securely log in, add, edit, delete, and search through their personal contact list. Built with user authentication and a streamlined interface for managing and organizing contact information efficiently.",
+      technologies: [
+        { name: "Linux", color: "fuchsia" },
+        { name: "Apache", color: "red" },
+        { name: "MySQL", color: "yellow" },
+        { name: "PHP", color: "purple" },
+        { name: "JavaScript", color: "cyan" },
+        { name: "CSS", color: "blue" },
+        { name: "Vite", color: "orange" }
+      ],
+      githubUrl: "https://github.com/vphatfla/COP-4331-S-Project",
+      imagePath: "/project-images/contact-manager.png" // Add this image to your public folder
+    }
+  ];
+
   return (
-    <div className="bg-white dark:bg-black text-gray-800 dark:text-white">
-      <div className="flex justify-end items-center gap-4 px-6 py-4">
-        <Link
-          href="/"
-          className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
-        >
-          Home
-        </Link>
-        <a
-          href="/AhmadShaqqouResume.pdf"
-          target="blank"
-          rel="noopener noreferrer"
-          className="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition"
-        >
-          Resume
-        </a>
-      </div>
+    <div className="bg-theme-background text-theme-foreground">
       {/* About Section */}
-      <section className="w-full bg-gray-100 dark:bg-gray-900 py-12 px-6">
+      <section id="about" className="w-full bg-theme-secondary py-16 px-6">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold mb-4 text-center">About Me</h1>
-          <p className="text-lg leading-relaxed text-center">
-            Hi! My name is Ahmad Shaqqou and I’m a Computer Science student at
-            UCF, graduating December 2025. I enjoy solving problems, building
-            web apps, and learning new tech!
-          </p>
+          <h1 className="text-4xl font-bold mb-6 text-center">About Me</h1>
+          <div className="flex flex-col md:flex-row gap-8 items-center">
+            <div className="md:w-1/3">
+              <Image
+                src="/103124SHPE-0781.jpg"
+                alt="Ahmad Shaqqou"
+                width={300}
+                height={300}
+                className="rounded-lg shadow-lg"
+              />
+            </div>
+            <div className="md:w-2/3">
+              <p className="text-lg leading-relaxed mb-4 text-theme-foreground">
+                Hi! My name is Ahmad Shaqqou and I'm a Computer Science student at
+                UCF, graduating December 2025. I enjoy solving problems, building
+                web apps, and learning new technologies.
+              </p>
+              <p className="text-lg leading-relaxed mb-4 text-theme-foreground">
+                My passion lies in creating efficient, user-friendly applications that solve real-world problems.
+                I'm particularly interested in full-stack development, where I can work on both the frontend and backend
+                aspects of applications.
+              </p>
+              
+            </div>
+          </div>
         </div>
       </section>
 
+      {/* Skills Section */}
+      <SkillsSection />
+
       {/* Experience Section */}
-      <section className="w-full bg-gray-200 dark:bg-[#1e1e1e] py-12 px-6">
+      <section id="experience" className="w-full bg-theme-secondary py-16 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-semibold mb-6 text-center">
+          <h2 className="text-3xl font-semibold mb-10 text-center">
             Experience
           </h2>
 
-          <div className="space-y-6">
+          <div className="space-y-8">
             {/* General Dynamics Card */}
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md relative overflow-hidden">
+            <div className="bg-theme-card p-6 rounded-lg shadow-md relative overflow-hidden border-theme">
               {/* Logo pinned right */}
-              <div className="absolute top-0 right-0 bottom-0 p-0">
+              <div className="absolute top-0 right-0 p-4">
                 <Image
                   src="/GD.png"
                   alt="General Dynamics logo"
-                  width={100}
-                  height={100}
-                  className="object-contain h-full w-full rounded-none"
+                  width={80}
+                  height={80}
+                  className="object-contain"
                 />
               </div>
 
@@ -59,24 +138,28 @@ export default function AboutPage() {
                 <h3 className="text-xl font-bold">
                   IT Software Engineering Intern
                 </h3>
-                <p className="text-md text-gray-800 dark:text-gray-200">
+                <p className="text-md text-theme-foreground">
                   General Dynamics - BIW · Summer 2025
                 </p>
-                <p className="mt-2 text-gray-700 dark:text-gray-300">
-                  - Will be working with ...
-                </p>
+                <div className="mt-4">
+                  <ul className="list-disc list-inside space-y-2 text-theme-muted">
+                    <li>Configured and optimized 20+ Jira workflows by setting up custom transitions, conditions, and post-functions using SIL scripts, improving ticket flow across multiple teams.</li>
+                    <li>Worked as a Jira Developer and Administrator, using JQL to build smart filters and automate ticket handling, helping cut down ticket processing time by 30%</li>
+                    <li>Wrote and deployed SIL scripts to automate manual Jira tasks, cutting configuration time by 40% and making day-to-day operations more efficient for the team.</li>
+                  </ul>
+                </div>
               </div>
             </div>
 
             {/* Tutor Card */}
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+            <div className="bg-theme-card p-6 rounded-lg shadow-md border-theme">
               <h3 className="text-xl font-bold">
                 Computer Science and Math Tutor
               </h3>
-              <p className="text-md text-gray-800 dark:text-gray-200">
+              <p className="text-md text-theme-foreground">
                 Coach Kelly Live · July 2023 - Current
               </p>
-              <ul className="mt-4 text-gray-700 dark:text-gray-300 list-disc list-inside space-y-4">
+              <ul className="mt-4 text-theme-muted list-disc list-inside space-y-4">
                 <li>
                   Tutored over 20+ students, leading to a 90% pass rate on the
                   UCF Computer Science Foundation Exam through personalized and
@@ -99,254 +182,47 @@ export default function AboutPage() {
       </section>
 
       {/* Projects Section */}
-      <section className="w-full bg-gray-100 dark:bg-gray-900 py-12 px-6">
+      <section id="projects" className="w-full bg-theme-secondary py-16 px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-semibold mb-10 text-center">Projects</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Project 1 */}
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md flex flex-col justify-between">
-              <div>
-                <h3 className="text-xl font-bold mb-2">DevSwipe</h3>
-                <p className="text-gray-700 dark:text-gray-300 text-[15px] leading-relaxed mb-4">
-                  A full stack application that allows users to swipe left or
-                  right on project ideas. Websockets are utlized for real-time
-                  updates to project ideas, matches, and chat messages after a
-                  match.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="bg-blue-300 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2 py-1 text-xs rounded">
-                    React
-                  </span>
-                  <span className="bg-pink-300 text-pink-800 dark:bg-pink-700 dark:text-pink-300 px-2 py-1 text-xs rounded">
-                    CSS
-                  </span>
-                  <span className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 px-2 py-1 text-xs rounded">
-                    MongoDB
-                  </span>
-                  <span className="bg-yellow-300 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 px-2 py-1 text-xs rounded">
-                    Apache
-                  </span>
-                  <span className="bg-cyan-300 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-200 px-2 py-1 text-xs rounded">
-                    Node.js
-                  </span>
-                  <span className="bg-indigo-300 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 px-2 py-1 text-xs rounded">
-                    TypeScript
-                  </span>
-                  <span className="bg-orange-300 text-orange-800 dark:bg-orange-900 dark:text-orange-200 px-2 py-1 text-xs rounded">
-                    Amazon lightsail
-                  </span>
-                  <span className="bg-red-300 text-red-800 dark:bg-red-900 dark:text-red-200 px-2 py-1 text-xs rounded">
-                    Socket.io
-                  </span>
-                  <span className="bg-fuchsia-300 text-fuchsia-800 dark:bg-fuchsia-900 dark:text-fuchsia-200 px-2 py-1 text-xs rounded">
-                    Postman
-                  </span>
-                  <span className="bg-emerald-300 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200 px-2 py-1 text-xs rounded">
-                    Express
-                  </span>
-                </div>
-              </div>
-              <a
-                href="https://github.com/devswipe-dev/devswipe"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-auto inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition text-sm text-center"
-              >
-                View on GitHub
-              </a>
-            </div>
-
-            {/* Project 2 */}
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md flex flex-col justify-between">
-              <div>
-                <h3 className="text-xl font-bold mb-2">AudioSync</h3>
-                <p className="text-gray-700 dark:text-gray-300 text-[15px] leading-relaxed mb-4">
-                  music recognition app that lets users identify songs through
-                  audio input using the Shazam API. Once a song is recognized,
-                  the app retrieves details like the title, artist, and album,
-                  and allows users to add it directly to their Spotify
-                  playlists.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="bg-purple-300 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-2 py-1 text-xs rounded">
-                    Python
-                  </span>
-                  <span className="bg-yellow-300 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 px-2 py-1 text-xs rounded">
-                    React
-                  </span>
-                  <span className="bg-blue-200 text-blue-800 dark:bg-blue-700 dark:text-blue-300 px-2 py-1 text-xs rounded">
-                    CSS
-                  </span>
-                  <span className="bg-orange-300 text-orange-800 dark:bg-orange-700 dark:text-orange-300 px-2 py-1 text-xs rounded">
-                    Flask
-                  </span>
-                </div>
-              </div>
-              <a
-                href="https://github.com/NSel1727/Audio-Sync"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-auto inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition text-sm text-center"
-              >
-                View on GitHub
-              </a>
-            </div>
-
-            {/* Project 3*/}
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md flex flex-col justify-between">
-              <div>
-                <h3 className="text-xl font-bold mb-2">Forex Trading Bot</h3>
-                <p className="text-gray-700 dark:text-gray-300 text-[15px] leading-relaxed mb-4">
-                  A Python-based trading bot that uses market indicators to make
-                  automated buy/sell decisions in the foreign exchange market.
-                  The bot’s performance was optimized through backtesting with
-                  the Alpaca API, resulting in consistent and profitable trade
-                  outcomes.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="bg-purple-300 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-2 py-1 text-xs rounded">
-                    Python
-                  </span>
-                  <span className="bg-yellow-300 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 px-2 py-1 text-xs rounded">
-                    Jupyter Notebook
-                  </span>
-                  <span className="bg-gray-300 text-gray-800 dark:bg-gray-700 dark:text-gray-300 px-2 py-1 text-xs rounded">
-                    Alpaca API
-                  </span>
-                </div>
-              </div>
-              <a
-                href="https://github.com/christina8711/forex"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-auto inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition text-sm text-center"
-              >
-                View on GitHub
-              </a>
-            </div>
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md flex flex-col justify-between">
-              <div>
-                <h3 className="text-xl font-bold mb-2">Contact Manager</h3>
-                <p className="text-gray-700 dark:text-gray-300 text-sm mb-4">
-                A full-stack CRUD application that allows users to securely log in, add, edit, delete, and search through their personal contact list.
-                Built with user authentication and a streamlined interface for managing and organizing contact information efficiently.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                <span className="bg-fuchsia-300 text-fuchsia-800 dark:bg-fuchsia-900 dark:text-fuchsia-200 px-2 py-1 text-xs rounded">
-                    Linix
-                  </span>
-                  <span className="bg-red-300 text-red-800 dark:bg-red-900 dark:text-red-200 px-2 py-1 text-xs rounded">
-                    Apache
-                  </span>
-                  <span className="bg-yellow-300 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 px-2 py-1 text-xs rounded">
-                    MySQL
-                  </span>
-                  <span className="bg-purple-300 text-purple-800 dark:bg-purple-700 dark:text-purple-300 px-2 py-1 text-xs rounded">
-                    PHP
-                  </span>
-                  <span className="bg-cyan-300 text-cyan-800 dark:bg-cyan-700 dark:text-cyan-300 px-2 py-1 text-xs rounded">
-                    JavaScript
-                  </span>
-                  <span className="bg-blue-300 text-blue-800 dark:bg-blue-700 dark:text-blue-300 px-2 py-1 text-xs rounded">
-                    CSS
-                  </span>
-                  <span className="bg-orange-300 text-orange-800 dark:bg-orange-700 dark:text-orange-300 px-2 py-1 text-xs rounded">
-                    Vite
-                  </span>
-                </div>
-              </div>
-              <a
-                href="https://github.com/vphatfla/COP-4331-S-Project"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-auto inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition text-sm text-center"
-              >
-                View on GitHub
-              </a>
-            </div>
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md flex flex-col justify-between">
-              <div>
-                <h3 className="text-xl font-bold mb-2">Forex Trading Bot</h3>
-                <p className="text-gray-700 dark:text-gray-300 text-sm mb-4">
-                  An app for creating study rooms, sharing notes, and
-                  collaborating in real-time.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="bg-red-300 text-red-800 dark:bg-red-900 dark:text-red-200 px-2 py-1 text-xs rounded">
-                    React
-                  </span>
-                  <span className="bg-yellow-300 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 px-2 py-1 text-xs rounded">
-                    Firebase
-                  </span>
-                  <span className="bg-gray-300 text-gray-800 dark:bg-gray-700 dark:text-gray-300 px-2 py-1 text-xs rounded">
-                    CSS
-                  </span>
-                </div>
-              </div>
-              <a
-                href="https://github.com/yourusername/insert project"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-auto inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition text-sm text-center"
-              >
-                View on GitHub
-              </a>
-            </div>
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md flex flex-col justify-between">
-              <div>
-                <h3 className="text-xl font-bold mb-2">Forex Trading Bot</h3>
-                <p className="text-gray-700 dark:text-gray-300 text-sm mb-4">
-                  An app for creating study rooms, sharing notes, and
-                  collaborating in real-time.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-2 py-1 text-xs rounded">
-                    React
-                  </span>
-                  <span className="bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 px-2 py-1 text-xs rounded">
-                    Firebase
-                  </span>
-                  <span className="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300 px-2 py-1 text-xs rounded">
-                    CSS
-                  </span>
-                </div>
-              </div>
-              <a
-                href="https://github.com/yourusername/insert project"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-auto inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition text-sm text-center"
-              >
-                View on GitHub
-              </a>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {projects.map((project, index) => (
+              <ProjectCard
+                key={index}
+                title={project.title}
+                description={project.description}
+                technologies={project.technologies}
+                githubUrl={project.githubUrl}
+                imagePath={project.imagePath}
+              />
+            ))}
           </div>
         </div>
       </section>
 
       {/* Education Section */}
-      <section className="w-full bg-gray-200 dark:bg-[#1e1e1e] py-12 px-6">
+      <section id="education" className="w-full bg-theme-secondary py-16 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-semibold mb-6 text-center">Education</h2>
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md relative overflow-hidden">
-            <div className="absolute top-0 right-0 bottom-0 p-0">
+          <h2 className="text-3xl font-semibold mb-10 text-center">Education</h2>
+          <div className="bg-theme-card p-6 rounded-lg shadow-md relative overflow-hidden border-theme">
+            <div className="absolute top-0 right-0 p-4">
               <Image
                 src="/UCF.png"
                 alt="UCF logo"
-                width={100}
-                height={100}
-                className="object-contain h-full w-full rounded-none"
+                width={80}
+                height={80}
+                className="object-contain"
               />
             </div>
             <div className="pr-32">
               <h3 className="text-xl font-bold">
                 University of Central Florida (UCF)
               </h3>
-              <p className="text-md text-gray-800 dark:text-gray-200">
+              <p className="text-md text-theme-foreground">
                 B.S. in Computer Science, Expected Graduation: December 2025
               </p>
-              <ul className="mt-4 text-gray-700 dark:text-gray-300 list-disc list-inside space-y-2">
-                <li>Dean’s List (multiple semesters)</li>
+              <ul className="mt-4 text-theme-muted list-disc list-inside space-y-2">
+                <li>Dean's List (multiple semesters)</li>
                 <li>Member of Knight Hacks, SHPE</li>
                 <li>
                   Relevant Courses: Data Structures & Algorithms, Software
@@ -357,19 +233,20 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      
       {/* Contact Section */}
-      <section className="bg-gray-900 text-white py-16 px-6">
+      <section id="contact" className="bg-theme-card py-16 px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold mb-8 text-center">Contact Me</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Left: Contact Text & Info */}
             <div>
               <h3 className="text-2xl font-semibold">Let's connect.</h3>
-              <p className="mt-2 text-gray-300">
+              <p className="mt-2 text-gray-3=500">
                 Fill out the form and I'll get back to you shortly.
               </p>
               <div className="mt-8 space-y-4">
-                <div className="text-sm text-gray-400">
+                <div className="flex space-x-4 mt-6">
                   <a
                     href="https://www.linkedin.com/in/ahmad-shaqqou/"
                     target="_blank"
@@ -386,8 +263,6 @@ export default function AboutPage() {
                     </svg>
                     LinkedIn
                   </a>
-                </div>
-                <div className="text-sm text-gray-400">
                   <a
                     href="https://github.com/ahmadshaqqou"
                     target="_blank"
@@ -412,42 +287,8 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/*Contact Form */}
-            <form className="bg-white text-black rounded-lg p-6 flex flex-col">
-              <label htmlFor="name" className="text-sm font-semibold mb-1">
-                Name
-              </label>
-              <input
-                type="text"
-                name="name"
-                className="border rounded px-3 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-
-              <label htmlFor="email" className="text-sm font-semibold mb-1">
-                Email
-              </label>
-              <input
-                type="email"
-                name="email"
-                className="border rounded px-3 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-
-              <label htmlFor="message" className="text-sm font-semibold mb-1">
-                Message
-              </label>
-              <textarea
-                name="message"
-                rows={4}
-                className="border rounded px-3 py-2 mb-6 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              ></textarea>
-
-              <button
-                type="submit"
-                className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition"
-              >
-                Send Message
-              </button>
-            </form>
+            {/* Contact Form */}
+            <ContactForm />
           </div>
         </div>
       </section>
