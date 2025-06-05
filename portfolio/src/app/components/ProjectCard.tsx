@@ -1,6 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
-
 interface Technology {
   name: string;
   color: string;

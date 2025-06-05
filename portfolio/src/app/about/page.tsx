@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import ProjectCard from "../components/ProjectCard";
 import SkillsSection from "../components/SkillsSection";
 import ContactForm from "../components/ContactForm";
@@ -94,13 +93,13 @@ export default function AboutPage() {
             </div>
             <div className="md:w-2/3">
               <p className="text-lg leading-relaxed mb-4 text-theme-foreground">
-                Hi! My name is Ahmad Shaqqou and I'm a Computer Science student at
+                Hi! My name is Ahmad Shaqqou and I am a Computer Science student at
                 UCF, graduating December 2025. I enjoy solving problems, building
                 web apps, and learning new technologies.
               </p>
               <p className="text-lg leading-relaxed mb-4 text-theme-foreground">
                 My passion lies in creating efficient, user-friendly applications that solve real-world problems.
-                I'm particularly interested in full-stack development, where I can work on both the frontend and backend
+                I am particularly interested in full-stack development, where I can work on both the frontend and backend
                 aspects of applications.
               </p>
               
@@ -222,7 +221,7 @@ export default function AboutPage() {
                 B.S. in Computer Science, Expected Graduation: December 2025
               </p>
               <ul className="mt-4 text-theme-muted list-disc list-inside space-y-2">
-                <li>Dean's List (multiple semesters)</li>
+                        <li>Dean's List (multiple semesters)</li>
                 <li>Member of Knight Hacks, SHPE</li>
                 <li>
                   Relevant Courses: Data Structures & Algorithms, Software
@@ -243,7 +242,7 @@ export default function AboutPage() {
             <div>
               <h3 className="text-2xl font-semibold">Let's connect.</h3>
               <p className="mt-2 text-gray-3=500">
-                Fill out the form and I'll get back to you shortly.
+                Fill out the form and I will get back to you shortly.
               </p>
               <div className="mt-8 space-y-4">
                 <div className="flex space-x-4 mt-6">
