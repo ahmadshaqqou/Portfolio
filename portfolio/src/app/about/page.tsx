@@ -46,7 +46,7 @@ export default function AboutPage() {
     },
     {
       title: "ahmadshaqqou.dev",
-      description: " Aportfolio that showcases my projects, technical skills, and experience.",
+      description: " A portfolio that showcases my projects, technical skills, and experience.",
       technologies: [
         { name: "Next.js", color: "fuchsia" },
         { name: "TypeScript", color: "red" },
